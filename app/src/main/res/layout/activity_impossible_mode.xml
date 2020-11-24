@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#18B300"
+    android:id="@+id/myLayouti"
+    tools:context=".ImpossibleMode">
+
+    <ImageView
+        android:id="@+id/leftHandlei"
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/left" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:text="0"
+        android:textColor="#F1EEEE"
+        android:textAlignment="center"
+        android:textSize="@android:dimen/app_icon_size"
+        android:layout_toLeftOf="@+id/viewVerticali"
+        android:layout_marginRight="80dp"
+        android:id="@+id/scorei"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="70dp"
+        android:id="@+id/rightHandlei"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="675dp"
+        android:src="@drawable/left" />
+    <View
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="#B3000F"
+        android:id="@+id/viewVerticali"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:id="@+id/balli"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="190dp"
+        android:src="@drawable/ball" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAP TO START GAME"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold"
+        android:id="@+id/startGamei"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/primary_text_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stalinist_one"
+        android:id="@+id/announcei"
+        android:text="Score: "
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="70sp"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/stalinist_one"
+        android:id="@+id/Scorei"
+        android:text="45"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:layout_toRightOf="@id/announcei"
+        android:layout_marginTop="70sp"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
