@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (userScore == 4 || aiScore == 4) {
                 if (userScore > aiScore) {
-                    announcement.setText("You Won");
+                    announcement.setText("You Wion");
                     soundPool.play(applause, 1, 1, 0, 0, 1);
 
                     try {
