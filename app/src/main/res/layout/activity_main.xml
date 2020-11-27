@@ -23,12 +23,14 @@
         android:src="@drawable/left" />
 
     <ImageView
+        android:id="@+id/rightHandle"
         android:layout_width="30dp"
         android:layout_height="70dp"
-        android:id="@+id/rightHandle"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="605dp"
         android:layout_marginTop="210dp"
-        android:layout_marginLeft="675dp"
         android:src="@drawable/left" />
+
     <View
         android:layout_width="3dp"
         android:layout_height="match_parent"

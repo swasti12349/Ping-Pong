@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     float ballX, ballY;
     RelativeLayout relativeLayout;
     public Timer timer;
-    TextView user, ai, announcement, tap;
+    public TextView user, ai, announcement, tap;
     int userScore, aiScore;
     boolean gameStarted = false;
     long TIMES = 4000;
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
         announcement = findViewById(R.id.announce);
         tap = findViewById(R.id.startGame);
 
-        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         AudioAttributes audioAttributes = new AudioAttributes.Builder()
                 .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
                 .setUsage(AudioAttributes.USAGE_GAME)
@@ -149,9 +148,9 @@ public class MainActivity extends AppCompatActivity {
                 ballY = screenHeight / 2f;
                 ballXSpeed = RandomDir()*10;
                 ballYSpeed = RandomDir()*4;
+                String str1;
+                user.setText(String.valueOf(userScore));
 
-                String str = String.valueOf(userScore);
-                user.setText(str);
 
 
             }
@@ -162,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 ballX = screenWidth / 2f;
                 ballY = screenHeight / 2f;
                 aiScore++;
-                String str1 = String.valueOf(aiScore);
-                ai.setText(str1);
+                ai.setText(String.valueOf(aiScore));
 
             }
 
@@ -203,9 +201,9 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
-            if (userScore == 4 || aiScore == 4) {
+            if (userScore == 10 || aiScore == 10) {
                 if (userScore > aiScore) {
-                    announcement.setText("You Wion");
+                    announcement.setText("You Won");
                     soundPool.play(applause, 1, 1, 0, 0, 1);
 
                     try {

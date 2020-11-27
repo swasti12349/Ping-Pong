@@ -53,8 +53,9 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 soundPool.play(click, 1, 1, 0, 0, 1);
-                startActivity(new Intent(getApplicationContext(), ImpossibleMode.class));
-                finish();
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                startActivity(Intent.createChooser(intent,"Send Via"));
             }
         });
         Exit.setOnClickListener(new View.OnClickListener() {
